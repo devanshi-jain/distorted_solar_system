@@ -180,8 +180,8 @@ void myRenderScene() {
         DayOfYearX += thisAnimateIncrement / 24.0;
 
         HourOfDay = HourOfDay - ((int)(HourOfDay / 24)) * 24;       // Wrap back to be in range [0,24)
-        DayOfYear = DayOfYear - ((int)(DayOfYear / 365)) * 365;     // Wrap back to be in range [0,365)
-        DayOfYearX = DayOfYearX - ((int)(DayOfYearX / 365)) * 500;     // Wrap back to be in range [0,365)
+        DayOfYear = DayOfYear - ((int)(DayOfYear / 365)) * 366;     // Wrap back to be in range [0,365)
+        DayOfYearX = DayOfYearX - ((int)(DayOfYearX / 365)) * 500;     // Wrap back to be in range [0,500)
 
         if (singleStep) {
             spinMode = false;       // If in single step mode, turn off future animation
